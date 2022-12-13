@@ -1,0 +1,12 @@
+<nav>
+    <a id="home" routerLink="">TopMovies</a>
+    <ng-container *ngIf="!isLoggedIn" >
+        <a routerLink="login">Login</a>
+        <a routerLink="register">Register</a>
+    </ng-container>
+    <ng-container *ngIf="isLoggedIn" >
+        <a routerLink="logout">Logout</a>
+        <a routerLink="catalog">Movies</a>
+        <a routerLink="create">Add movie</a>
+    </ng-container>
+</nav>

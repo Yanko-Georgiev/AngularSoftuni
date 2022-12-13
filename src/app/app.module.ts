@@ -4,30 +4,42 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './auth/core/footer/footer.component';
-import { HeaderComponent } from './auth/core/header/header.component';
 import { AuthModule } from './auth/auth.module';
 import { FormsModule } from '@angular/forms';
 import { AuthenticatorComponent } from './authenticator/authenticator.component';
+import { CoreModule } from './core/core.module';
+import { MovieModule } from './movie/movie.module';
+import { HttpClientModule } from '@angular/common/http';
+import { AppInterceptor, appInterceptorProvider } from './app.interceptor';
+import { BehaviorSubject } from 'rxjs';
+import { API_ERROR } from './constants';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FooterComponent,
-    HeaderComponent,
     AuthenticatorComponent
+    
   ],
   imports: [
     BrowserModule,
     AuthModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CoreModule,
+    MovieModule,
+    HttpClientModule,
   ],
   exports: [
     AuthenticatorComponent,
   ],
-  providers: [],
+  providers: [
+    appInterceptorProvider,
+    {
+      provide: API_ERROR,
+      useValue: new BehaviorSubject(null)
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

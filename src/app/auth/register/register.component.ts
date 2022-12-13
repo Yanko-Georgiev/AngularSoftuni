@@ -27,7 +27,7 @@ export class RegisterComponent {
   RegisterHandler() {
     const {username,email,pass:{password,rePassword}={}}=this.form.value;
     this.authService.register(username!,email!,password!,rePassword!)
-    .subscribe((user)=>{
+    .subscribe(user=>{
       this.router.navigate(['/'])
     })
   }

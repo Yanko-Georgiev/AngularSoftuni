@@ -1,0 +1,13 @@
+<h1>Movie Catalog</h1>
+<h2>Top 3 movies this week</h2>
+<div>
+    
+    <ul class="card-wrapper">
+        <li *ngFor="let movie of movieList?.slice(0,3); let i=index" class="card">
+            <img src={{movie.img}} alt=''>
+            <h3><a href="">{{movie.movieName}}</a></h3>
+            <p>{{movie.description}}</p>
+        </li>
+    </ul>
+
+  </div>

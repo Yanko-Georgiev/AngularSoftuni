@@ -1,8 +1,0 @@
-<nav>
-    <a id="home" routerLink="\">Home</a>
-    <ng-container *ngIf="!isLoggedIn" >
-        <a routerLink="login">Login</a>
-        <a routerLink="register">Register</a>
-    </ng-container>
-    <a *ngIf="isLoggedIn" routerLink="logout">Logout</a>
-</nav>

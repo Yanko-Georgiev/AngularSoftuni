@@ -17,8 +17,6 @@ export class LoginComponent {
     const {email, password} = form.value;
     this.authService.login(email!, password!)
     .subscribe(user=>{this.router.navigate(['/'])})
-    const url = this.activatedRoute.snapshot.queryParams['url']||'/'
-    this.router.navigate([url])
   }
 
 }

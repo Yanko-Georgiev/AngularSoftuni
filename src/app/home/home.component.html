@@ -1,1 +1,22 @@
-<p>home works!</p>
+<ng-template #guest>
+    <h1>Welcome to TopMovies</h1>
+    <p class="sign-message">Please <a routerLink="login">sign in</a> in to continue</p>
+    <ul class="card-wrapper">
+        <li *ngFor="let movie of movieList?.slice(0,2); let i=index" class="card">
+            <img src={{movie.img}} alt=''>
+            <h3><a href="">{{movie.movieName}}</a></h3>
+            <p>{{movie.description}}</p>
+        </li>
+    </ul>
+</ng-template>
+<ng-template #user>
+    <h1>Welcome to TopMovies, {{username}}</h1>
+    <ul class="card-wrapper">
+        <li *ngFor="let movie of movieList; let i=index" class="card">
+            <img src={{movie.img}} alt=''>
+            <h3><a href="">{{movie.movieName}}</a></h3>
+            <p>{{movie.description}}</p>
+        </li>
+    </ul>
+</ng-template>
+<ng-container *ngTemplateOutlet="!isLoggedIn ?guest :user"></ng-container>

@@ -24,7 +24,7 @@ export class HomeComponent  implements OnInit{
   ngOnInit(): void {
     this.apiService.loadMovies().subscribe({
       next:(value)=>{
-        this.movieList=value;
+        this.movieList=value.sort((a,b)=>a.comments.length-b.comments.length).slice(0,4);
       },
       error: (err)=>{
         console.error(err);

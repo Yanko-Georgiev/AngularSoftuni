@@ -11,7 +11,7 @@ const apiURL = environment.apiURL;
 export class MovieService {
 
   constructor(private http: HttpClient) { }
-  newMovie(movieName: string,img: string, description: string){
+  newMovie(movieName: string, img: string, description: string){
     return this.http.post<any>(`${apiURL}/movies`,{movieName, img, description})
   }
   editMovie(id: string, movieName: string, img: string, description:string){

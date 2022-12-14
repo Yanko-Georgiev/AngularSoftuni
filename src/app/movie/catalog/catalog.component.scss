@@ -41,6 +41,7 @@ h1, h2{
         &:hover,
         &:focus-within {
             animation-name: swing-forwards;
+            cursor: pointer;
         }
         animation-name: swing-backwards;
         animation-duration: 0.5s;
@@ -79,7 +80,6 @@ h1, h2{
 .card-wrapper {
     list-style: none;
     padding: 0;
-    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
     grid-gap: 1.5rem;
@@ -91,6 +91,7 @@ h1, h2{
     margin-right: auto;
 
 }
+
 @keyframes swing-forwards {
     0% {
       

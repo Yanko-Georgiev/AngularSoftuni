@@ -1,0 +1,22 @@
+<div class="container"> 
+    <div class="row"> 
+        <div class="col-md-6"> 
+            <div class="card"> 
+                <form #form="ngForm" (ngSubmit)="EditMovieHandler(form)" class="box"> 
+                    <h1>Edit Movie</h1> 
+                    <p class="text-muted"> Please enter movie details!</p> 
+                    <input type="text" required ngModel #titleInput="ngModel" name="movieName" placeholder="Title" value={{movieData?.movieName}}> 
+                    <p *ngIf="titleInput.errors?.['required'] && titleInput.touched">
+                        Title is required!
+                    </p>
+                    <input type="text" required ngModel #imgInput="ngModel" name="img" placeholder="imgUrl" value={{movieData?.img}}> 
+                    <p *ngIf="imgInput.errors?.['required'] && imgInput.touched">
+                        ImageURL is required!
+                    </p>
+                    <input type="text" required ngModel #descriptionInput="ngModel" name="description" placeholder="description" value={{movieData?.description}}>
+                    <input [disabled]="form.invalid" type="submit" value="Edit"> 
+                </form> 
+            </div> 
+        </div> 
+    </div>
+</div>

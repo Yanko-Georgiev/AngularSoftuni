@@ -4,19 +4,22 @@
     <ul class="card-wrapper">
         <li *ngFor="let movie of movieList?.slice(0,2); let i=index" class="card">
             <img src={{movie.img}} alt=''>
-            <h3><a href="">{{movie.movieName}}</a></h3>
+            <h3><a routerLink="/catalog/details/{{movie._id}}">{{movie.movieName}}</a></h3>
             <p>{{movie.description}}</p>
         </li>
     </ul>
 </ng-template>
 <ng-template #user>
     <h1>Welcome to TopMovies, {{username}}</h1>
+    <h2>Most liked movies of all time!</h2>
+
     <ul class="card-wrapper">
-        <li *ngFor="let movie of movieList; let i=index" class="card">
+        <li routerLink="/catalog/details/{{movie._id}}" *ngFor="let movie of movieList; let i=index" class="card">
             <img src={{movie.img}} alt=''>
-            <h3><a href="">{{movie.movieName}}</a></h3>
+            <h3>{{movie.movieName}}</h3>
             <p>{{movie.description}}</p>
         </li>
     </ul>
 </ng-template>
 <ng-container *ngTemplateOutlet="!isLoggedIn ?guest :user"></ng-container>
+<p routerLink="/catalog" class="all-movies">All movies</p>

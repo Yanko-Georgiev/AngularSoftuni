@@ -7,13 +7,17 @@ import { AddMovieComponent } from './add-movie/add-movie.component';
 import { DetailsComponent } from './details/details.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditMovieComponent } from './edit-movie/edit-movie.component';
+import { DeleteMovieComponent } from './delete-movie/delete-movie.component';
 
 
 @NgModule({
   declarations: [
     CatalogComponent,
     AddMovieComponent,
-    DetailsComponent
+    DetailsComponent,
+    EditMovieComponent,
+    DeleteMovieComponent,
   ],
   imports: [
     CommonModule,

@@ -1,13 +1,19 @@
-<h1>Movie Catalog</h1>
-<h2>Top 3 movies this week</h2>
+<h1>TopMovies Catalog</h1>
+<h2>Most recent movies</h2>
 <div>
     
     <ul class="card-wrapper">
-        <li *ngFor="let movie of movieList?.slice(0,3); let i=index" class="card">
+        <li routerLink="details/{{movie._id}}" *ngFor="let movie of movieList?.slice(-3); let i=index" class="card">
             <img src={{movie.img}} alt=''>
-            <h3><a href="">{{movie.movieName}}</a></h3>
+            <h3>{{movie.movieName}}</h3>
             <p>{{movie.description}}</p>
         </li>
     </ul>
-
+    <ul class="card-wrapper">
+        <li routerLink="/catalog/details/{{movie._id}}" *ngFor="let movie of movieList?.slice(0,-3); let i=index" class="card">
+            <img src={{movie.img}} alt=''>
+            <h3>{{movie.movieName}}</h3>
+            <p>{{movie.description}}</p>
+        </li>
+    </ul>
   </div>

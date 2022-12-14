@@ -18,7 +18,7 @@ import { API_ERROR } from './constants';
   declarations: [
     AppComponent,
     HomeComponent,
-    AuthenticatorComponent
+    AuthenticatorComponent,
     
   ],
   imports: [

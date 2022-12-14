@@ -39,6 +39,7 @@
     &:hover,
     &:focus-within {
       --card-gradient: #24a9d5 max(8.5rem, 20vh);
+      cursor: pointer;
     }
   }
   
@@ -97,3 +98,25 @@
         color: red;
     }
   }
+  h2{
+    color: #fff;
+    text-align: center;
+  }
+  .all-movies{
+    background-color: #191919;
+    width: 85%;
+    margin-bottom: 10%;
+    margin-left: 7.2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0.5rem;
+  }
+  .all-movies:hover{
+    background-color: #fff;
+    color: #191919;
+  }
+  

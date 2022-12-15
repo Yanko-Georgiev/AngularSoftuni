@@ -16,8 +16,19 @@ export class AddMovieComponent {
     if (form.invalid) {
       return
     }
-    const{movieName,img,description}=form.value;
-    this.movieService.newMovie(movieName,img,description)
+    const{movieName,img,description,topCast1,topCast2,topCast3,topCast4,topCast5,topCastRole1,topCastRole2,topCastRole3,topCastRole4,topCastRole5}=form.value;
+    const topCast:Array<Array<string>>=[[topCast1,topCastRole1],[topCast2,topCastRole2],[topCast3,topCastRole3],[topCast4,topCastRole4],[topCast5,topCastRole5]]
+   
+    let i = 0
+    while (i < topCast.length) {
+      if(topCast[i][0]==''||topCast[i][1]==''){
+        (topCast.splice(i,1))
+      }else{
+        i++;
+      }
+      
+    }
+    this.movieService.newMovie(movieName,img,description,topCast)
     .subscribe(()=>{
       this.router.navigate(['/catalog'])
     })

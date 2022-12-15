@@ -1,7 +1,7 @@
 <h1>TopMovies Catalog</h1>
-<h2>Most recent movies</h2>
-<div>
-    
+<ng-template #empty><h2>There is no movies yet</h2></ng-template>
+<ng-template #full >
+    <h2>Most recent movies</h2>
     <ul class="card-wrapper">
         <li routerLink="details/{{movie._id}}" *ngFor="let movie of movieList?.slice(-3); let i=index" class="card">
             <img src={{movie.img}} alt=''>
@@ -16,4 +16,5 @@
             <p>{{movie.description}}</p>
         </li>
     </ul>
-  </div>
+  </ng-template>
+  <ng-container *ngTemplateOutlet="isEmpty ? empty : full"></ng-container>

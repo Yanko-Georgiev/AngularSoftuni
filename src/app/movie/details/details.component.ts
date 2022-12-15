@@ -14,6 +14,7 @@ export class DetailsComponent {
   movieData: IMovie|null=null;
   user: IUser|null=null;
   isOwner!: boolean;
+  cast!:Array<Array<string>>|undefined;
   get isLoggedIn(){
     return this.authService.isLoggedIn
   }

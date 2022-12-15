@@ -16,15 +16,17 @@ export class HomeComponent  implements OnInit{
   get isLoggedIn() {
     return this.authService.isLoggedIn;
   }
-
+  isEmpty!:boolean
   
 
-  constructor(private apiService: ApiService, private authService:AuthService){}
-
+  constructor(private apiService: ApiService, private authService:AuthService){
+  }
+  
   ngOnInit(): void {
     this.apiService.loadMovies().subscribe({
       next:(value)=>{
-        this.movieList=value.sort((a,b)=>a.comments.length-b.comments.length).slice(0,4);
+        this.movieList=value.sort((a,b)=>a.likes.length-b.likes.length).slice(0,4);
+        this.isEmpty=this.movieList?.length==0
       },
       error: (err)=>{
         console.error(err);

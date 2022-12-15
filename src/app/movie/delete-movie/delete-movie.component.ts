@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { IMovie } from 'src/app/interfaces/movie';
 import { MovieService } from '../movie.service';
 
 @Component({
@@ -8,10 +9,16 @@ import { MovieService } from '../movie.service';
   styleUrls: ['./delete-movie.component.scss']
 })
 export class DeleteMovieComponent{
-  constructor(private movieService: MovieService, private router:Router){
-    this.movieService.deleteMovie('6399c38142df9a0683b6c9f9').subscribe({
+
+  movieData: IMovie|null=null;
+
+  constructor(private movieService: MovieService, private router:Router,private activatedRoute: ActivatedRoute){
+    this.movieData=this.activatedRoute.snapshot.data?.['movie'];
+    console.log(this.movieData);
+    
+    this.movieService.deleteMovie("").subscribe({
       next:()=>{
-        router.navigate(['/catalog'])
+        this.router.navigate(['/catalog'])
       },
       error:(err)=>{
         console.error(err)

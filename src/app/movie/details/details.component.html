@@ -7,7 +7,7 @@
         <div class="control">
             <ng-template #notOwner>
                 <button *ngIf="isLoggedIn" class="btn">
-                    <span class="price">{{movieData?.comments?.length}}</span>
+                    <span class="price">{{movieData?.likes?.length}}</span>
                     <span class="buy">Like</span>
                 </button>
             </ng-template>
@@ -25,19 +25,13 @@
 
         <img src={{movieData?.img}} alt="">
 
-        <!-- <div class="info">
-            <h2>The Description</h2>
+        <div class="info">
+            <h2>The Cast</h2>
             <ul>
-                <li><strong>Sun Needs: </strong>Full Sun</li>
-                <li><strong>Soil Needs: </strong>Damp</li>
-                <li><strong>Zones: </strong>9 - 11</li>
-                <li><strong>Height: </strong>2 - 3 feet</li>
-                <li><strong>Blooms in: </strong>Mid‑Summer - Mid‑Fall</li>
-                <li><strong>Features: </strong>Tolerates heat</li>
+                <li *ngFor="let castMember of movieData?.topCast"><strong> {{castMember[0]}} </strong> as {{castMember[1]}}</li>
             </ul>
-        </div> -->
+        </div>
     </div>
-
 
 
 </div>

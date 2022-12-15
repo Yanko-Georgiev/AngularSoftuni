@@ -13,15 +13,13 @@ import { MovieService } from '../movie.service';
   styleUrls: ['./edit-movie.component.scss']
 })
 
-export class EditMovieComponent implements OnInit{
+export class EditMovieComponent{
   
   movieData: IMovie|null=null;
   constructor(private activatedRoute: ActivatedRoute, private movieService: MovieService, private authService:AuthService, private router: Router, private apiService:ApiService){
-  }
-  ngOnInit(): void {
     this.movieData=this.activatedRoute.snapshot.data?.['movie'];
     console.log(this.movieData);
-    
+  
   }
   
   EditMovieHandler(form: NgForm): void{

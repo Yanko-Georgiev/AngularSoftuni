@@ -14,10 +14,10 @@ export class MovieService {
   newMovie(movieName: string, img: string, description: string, topCast: Array<Array<string>>){
     return this.http.post<any>(`${apiURL}/movies`,{movieName, img, description, topCast})
   }
-  editMovie(id: string, movieName: string, img: string, description:string){
-    return this.http.put<any>(`${apiURL}/movies/${id}`,{movieName, img, description})
+  editMovie(id: string|undefined, movieName: string, img: string, description:string,topCast:Array<Array<string>>){
+    return this.http.put<any>(`${apiURL}/movies/${id}`,{movieName, img, description, topCast})
   }
-  deleteMovie(id: string){
+  deleteMovie(id: string|undefined){
     return this.http.delete<any>(`${apiURL}/movies/${id}`)
   }
 }

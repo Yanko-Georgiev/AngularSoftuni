@@ -11,12 +11,12 @@ import { MovieService } from '../movie.service';
 export class DeleteMovieComponent{
 
   movieData: IMovie|null=null;
-
+  movieId: string|undefined;
   constructor(private movieService: MovieService, private router:Router,private activatedRoute: ActivatedRoute){
     this.movieData=this.activatedRoute.snapshot.data?.['movie'];
     console.log(this.movieData);
-    
-    this.movieService.deleteMovie("").subscribe({
+    this.movieId=this.movieData?._id.toString();
+    this.movieService.deleteMovie(this.movieId).subscribe({
       next:()=>{
         this.router.navigate(['/catalog'])
       },

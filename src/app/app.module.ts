@@ -13,12 +13,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppInterceptor, appInterceptorProvider } from './app.interceptor';
 import { BehaviorSubject } from 'rxjs';
 import { API_ERROR } from './constants';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AuthenticatorComponent,
+    NotFoundComponent,
     
   ],
   imports: [

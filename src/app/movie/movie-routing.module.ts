@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from '../not-found/not-found.component';
 import { AddMovieComponent } from './add-movie/add-movie.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { DeleteMovieComponent } from './delete-movie/delete-movie.component';
@@ -10,31 +11,47 @@ import { MovieResolver } from './movie.resolver';
 const routes: Routes = [
   {
     path: 'catalog',
-    component: CatalogComponent
+    component: CatalogComponent,
+    data: {
+      title: 'Catalog',
+    }
   },
   {
     path: 'create',
-    component: AddMovieComponent
+    component: AddMovieComponent,
+    data: {
+      title: 'Add Movie',
+    }
   },
   {
     path: 'catalog/details/:movieId',
     resolve: {movie: MovieResolver} ,
-    component: DetailsComponent
+    component: DetailsComponent,
+    data: {
+      title: 'Details',
+    }
   },
   {
     path: 'catalog/edit/:movieId',
     resolve: {movie: MovieResolver} ,
-    component: EditMovieComponent
+    component: EditMovieComponent,
+    data: {
+      title: 'Edit Movie',
+    }
   },
   {
     path: 'catalog/delete/:movieId',
     resolve: {movie: MovieResolver} ,
     component: DeleteMovieComponent
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
+    data: {
+      title: 'Error 404',
+    }
   }
 ];
 
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class MovieRoutingModule { }
+
+export const MovieRoutingModule = RouterModule.forChild(routes)

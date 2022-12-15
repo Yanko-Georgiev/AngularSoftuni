@@ -48,11 +48,8 @@ function editMovie(req, res, next) {
 }
 function deleteMovie(req, res, next) {
     const { movieId } = req.params;
-    const { _id: userId } = req.user;
-    Promise.all([
-        movieModel.findOneAndDelete({ _id: movieId }),
-        userModel.findOneAndUpdate({ _id: userId }, { $pull: { movies: movieId } }),
-    ])
+    
+    movieModel.findOneAndDelete({ _id: movieId })
     .then(deletedMovie => {
         if (deletedMovie) {
             res.status(200).json(deletedMovie);

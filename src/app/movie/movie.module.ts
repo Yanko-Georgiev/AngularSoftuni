@@ -9,6 +9,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditMovieComponent } from './edit-movie/edit-movie.component';
 import { DeleteMovieComponent } from './delete-movie/delete-movie.component';
+import { LikeComponent } from './like/like.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { DeleteMovieComponent } from './delete-movie/delete-movie.component';
     DetailsComponent,
     EditMovieComponent,
     DeleteMovieComponent,
+    LikeComponent,
   ],
   imports: [
     CommonModule,

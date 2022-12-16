@@ -25,7 +25,7 @@ export class HomeComponent  implements OnInit{
   ngOnInit(): void {
     this.apiService.loadMovies().subscribe({
       next:(value)=>{
-        this.movieList=value.sort((a,b)=>a.likes.length-b.likes.length).slice(0,4);
+        this.movieList=value.sort((a,b)=>b.likes.length-a.likes.length).slice(0,4);
         this.isEmpty=this.movieList?.length==0
       },
       error: (err)=>{
@@ -33,7 +33,7 @@ export class HomeComponent  implements OnInit{
       }
     })
     this.username=this.authService.user?.username
-    console.log(this.authService.user);
+    
     
   }
 

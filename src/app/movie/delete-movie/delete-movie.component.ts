@@ -14,7 +14,6 @@ export class DeleteMovieComponent{
   movieId: string|undefined;
   constructor(private movieService: MovieService, private router:Router,private activatedRoute: ActivatedRoute){
     this.movieData=this.activatedRoute.snapshot.data?.['movie'];
-    console.log(this.movieData);
     this.movieId=this.movieData?._id.toString();
     this.movieService.deleteMovie(this.movieId).subscribe({
       next:()=>{

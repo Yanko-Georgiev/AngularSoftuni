@@ -20,6 +20,8 @@ export class CatalogComponent implements OnInit{
       next:(value)=>{
         this.movieList=value
         this.isEmpty = this.movieList?.length==0
+        
+        
       },
       error: (err)=>{
         console.error(err)

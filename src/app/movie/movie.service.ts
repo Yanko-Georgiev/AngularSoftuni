@@ -20,4 +20,8 @@ export class MovieService {
   deleteMovie(id: string|undefined){
     return this.http.delete<any>(`${apiURL}/movies/${id}`)
   }
+  likeMovie(id: string|undefined, userId: string|undefined){
+    return this.http.put<any>(`${apiURL}/movies/${id}/like`,{userId})
+
+  }
 }

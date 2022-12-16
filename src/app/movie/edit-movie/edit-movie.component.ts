@@ -20,7 +20,6 @@ export class EditMovieComponent{
   movieData: IMovie|null=null;
   constructor(private activatedRoute: ActivatedRoute, private movieService: MovieService, private authService:AuthService, private router: Router, private apiService:ApiService){
     this.movieData=this.activatedRoute.snapshot.data?.['movie'];
-    console.log(this.movieData);
     let l = 0;
     if(this.movieData?.topCast.length!=undefined){
       l=this.movieData.topCast.length

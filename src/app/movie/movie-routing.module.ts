@@ -7,13 +7,13 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { DeleteMovieComponent } from './delete-movie/delete-movie.component';
 import { DetailsComponent } from './details/details.component';
 import { EditMovieComponent } from './edit-movie/edit-movie.component';
+import { LikeComponent } from './like/like.component';
 import { MovieResolver } from './movie.resolver';
 
 const routes: Routes = [
   {
     path: 'catalog',
     component: CatalogComponent,
-    canActivate:[AuthActivate],
     data: {
       title: 'Catalog',
       loginRequired: true
@@ -21,7 +21,6 @@ const routes: Routes = [
   },
   {
     path: 'create',
-    canActivate:[AuthActivate],
     component: AddMovieComponent,
     data: {
       title: 'Add Movie',
@@ -30,7 +29,6 @@ const routes: Routes = [
   },
   {
     path: 'catalog/details/:movieId',
-    canActivate:[AuthActivate],
     resolve: {movie: MovieResolver} ,
     component: DetailsComponent,
     data: {
@@ -40,7 +38,6 @@ const routes: Routes = [
   },
   {
     path: 'catalog/edit/:movieId',
-    canActivate:[AuthActivate],
     resolve: {movie: MovieResolver} ,
     component: EditMovieComponent,
     data: {
@@ -50,11 +47,19 @@ const routes: Routes = [
   },
   {
     path: 'catalog/delete/:movieId',
-    canActivate:[AuthActivate],
     resolve: {movie: MovieResolver} ,
     component: DeleteMovieComponent,
     data: {
       title: 'Delete',
+      loginRequired: true
+    }
+  },
+  {
+    path: 'catalog/like/:movieId',
+    resolve: {movie: MovieResolver} ,
+    component: LikeComponent,
+    data: {
+      title: 'Like',
       loginRequired: true
     }
   },

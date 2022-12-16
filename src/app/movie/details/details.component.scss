@@ -113,8 +113,8 @@ a{
   padding: 10px 20px;
 	font-size: 1.2em;
 	margin:0;
-	
 }
+
 /* shopping cart icon */
 .btn .likes, .animate{
 	background: #191919;
@@ -139,7 +139,7 @@ a{
 }
 
 /* like */
-.btn .like {z-index: 3; font-weight: bolder;cursor: pointer;}
+.btn .like {z-index: 3; font-weight: bolder; cursor: pointer;}
 
 .btn:hover .likes {transform: translateX(-110%);}
 

@@ -11,12 +11,7 @@ function getMovie(req, res, next) {
     const { movieId } = req.params;
 
     movieModel.findById(movieId)
-        .populate({
-            path : 'likes',
-            populate : {
-              path : 'userId'
-            }
-          })
+        
         .then(movie => res.json(movie))
         .catch(next);
 }
@@ -62,11 +57,10 @@ function deleteMovie(req, res, next) {
 }
 
 function like(req, res, next) {
-    const { movieId } = req.params.movieId;
-    const { _id: userId } = req.user;
+    const { movieId } = req.params;
+    const { userId } = req.body;
 
-    console.log('like')
-
+    
     movieModel.updateOne({ _id: movieId }, { $addToSet: { likes: userId } }, { new: true })
         .then(() => res.status(200).json({ message: 'Liked successful!' }))
         .catch(next)

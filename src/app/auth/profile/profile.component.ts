@@ -23,8 +23,7 @@ export class ProfileComponent {
         this.movieList=value
         this.userId=this.authService.user?._id.toString()
         this.movieList = this.movieList.filter(x=>x.userId._id.toString()==this.userId)
-        console.log(this.movieList);
-        console.log(this.userId);
+        
         
         
         this.isEmpty=this.movieList.length==0

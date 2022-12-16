@@ -13,8 +13,8 @@ export class LoggedActivate implements CanActivate{
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
         const loginRequired = route.data['loginRequired'];
-        if (this.authService.isLoggedIn==true && loginRequired==false) {
-            return false;
+        if (this.authService.isLoggedIn===false) {
+            return true;
         }
         return this.router.createUrlTree([`/`])
     }

@@ -8,7 +8,8 @@
             <ng-template #notOwner>
                 <button *ngIf="isLoggedIn" class="btn">
                     <span class="likes">{{movieData?.likes?.length}}</span>
-                    <span class="like">Like</span>
+                    <span *ngIf="!isLiked" routerLink="../../like/{{movieData?._id}}" class="like">Like</span>
+                    <span *ngIf="isLiked" class="like">Liked</span>
                 </button>
             </ng-template>
             <ng-template #owner>

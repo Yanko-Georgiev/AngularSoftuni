@@ -9,7 +9,7 @@ router.get('/', movieController.getMovies);
 router.post('/', auth(), movieController.createMovie);
 router.put('/:movieId', auth(), movieController.editMovie);
 router.delete('/:movieId',auth(), movieController.deleteMovie);
-router.put('/:movieId/like',auth(), movieController.like);
+router.put('/:movieId/like', movieController.like);
 
 router.get('/:movieId', movieController.getMovie);
 

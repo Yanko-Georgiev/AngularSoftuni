@@ -5,7 +5,7 @@ export interface IMovie {
     movieName: string,
     description: string,
     img:string,
-    likes: string[],
+    likes: Array<string>,
     topCast:Array<Array<string>>,
     userId: IUser,
     created_at: string,

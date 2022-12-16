@@ -7,8 +7,8 @@
         <div class="control">
             <ng-template #notOwner>
                 <button *ngIf="isLoggedIn" class="btn">
-                    <span class="price">{{movieData?.likes?.length}}</span>
-                    <span class="buy">Like</span>
+                    <span class="likes">{{movieData?.likes?.length}}</span>
+                    <span class="like">Like</span>
                 </button>
             </ng-template>
             <ng-template #owner>

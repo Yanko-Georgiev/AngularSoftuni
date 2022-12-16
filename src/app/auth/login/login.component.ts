@@ -18,5 +18,4 @@ export class LoginComponent {
     this.authService.login(email!, password!)
     .subscribe(user=>{this.router.navigate(['/'])})
   }
-
 }

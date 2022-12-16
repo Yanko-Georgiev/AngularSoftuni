@@ -10,10 +10,11 @@ import { MovieService } from '../movie.service';
 })
 export class AddMovieComponent {
 
-
+  invalid:boolean=false;
   constructor(private movieService: MovieService, private router: Router){}
   NewMovieHandler(form: NgForm): void{
     if (form.invalid) {
+      this.invalid=true
       return
     }
     const{movieName,img,description,topCast1,topCast2,topCast3,topCast4,topCast5,topCastRole1,topCastRole2,topCastRole3,topCastRole4,topCastRole5}=form.value;

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthActivate } from '../guard/auth.activate';
 import { NotFoundComponent } from '../not-found/not-found.component';
 import { AddMovieComponent } from './add-movie/add-movie.component';
 import { CatalogComponent } from './catalog/catalog.component';
@@ -12,37 +13,50 @@ const routes: Routes = [
   {
     path: 'catalog',
     component: CatalogComponent,
+    canActivate:[AuthActivate],
     data: {
       title: 'Catalog',
+      loginRequired: true
     }
   },
   {
     path: 'create',
+    canActivate:[AuthActivate],
     component: AddMovieComponent,
     data: {
       title: 'Add Movie',
+      loginRequired: true
     }
   },
   {
     path: 'catalog/details/:movieId',
+    canActivate:[AuthActivate],
     resolve: {movie: MovieResolver} ,
     component: DetailsComponent,
     data: {
       title: 'Details',
+      loginRequired: true
     }
   },
   {
     path: 'catalog/edit/:movieId',
+    canActivate:[AuthActivate],
     resolve: {movie: MovieResolver} ,
     component: EditMovieComponent,
     data: {
       title: 'Edit Movie',
+      loginRequired: true
     }
   },
   {
     path: 'catalog/delete/:movieId',
+    canActivate:[AuthActivate],
     resolve: {movie: MovieResolver} ,
-    component: DeleteMovieComponent
+    component: DeleteMovieComponent,
+    data: {
+      title: 'Delete',
+      loginRequired: true
+    }
   },
   {
     path: '**',

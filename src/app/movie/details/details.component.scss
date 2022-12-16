@@ -10,7 +10,7 @@ background: #DFC2F2;
 
 #container{
 	box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
-	background: rgba(255, 255, 255, 0.90);
+	background: #191919;
 	text-align: center;
 	border-radius: 5px;
 	overflow: hidden;
@@ -40,7 +40,7 @@ background: #DFC2F2;
     text-align: center;
 	position: relative;
 	font-size: 34px;
-	color: #191919;
+	color: #fff;
 	margin: 0;
 	
 }
@@ -57,7 +57,7 @@ background: #DFC2F2;
 	font-family: 'Farsan', cursive;
 	text-align: center;
 	font-size: 20px;
-	color: #191919;
+	color: #fff;
 	
 }
 
@@ -73,14 +73,14 @@ background: #DFC2F2;
 .btn {
 	transform: translateY(0px);
 	transition: 0.3s linear;
-	background: #49C608;
+	background: #fff;
+	color: #191919;
 	border-radius: 5px;
   position: relative;
   overflow: hidden;
 	cursor: pointer;
 	outline: none;
 	border: none;
-	color: #eee;
 	padding: 0;
 	margin: 0;
 }
@@ -96,8 +96,8 @@ background: #DFC2F2;
     height: 40px;
     padding: 2.5px;
     font-size: 1.2em;
-    background-color: #191919;
-    color: #fff;
+    background-color: #fff;
+    color: #191919;
     margin: 5px;
 }
 a{
@@ -116,32 +116,34 @@ a{
 	
 }
 /* shopping cart icon */
-.btn .price, .shopping-cart{
-	background: #333;
+.btn .likes, .animate{
+	background: #191919;
+	color: #fff;
 	border: 0;
 	margin: 0;
 }
 
-.btn .price {
-	transform: translateX(-10%); padding-right: 15px;
+.btn .likes {
+	padding-right: 15px;
 }
 
 /* the Icon */
-.btn .shopping-cart {
+.btn .animate {
 	transform: translateX(-100%);
   position: absolute;
-	background: #333;
+	background: #191919;
+	color: #fff;
 	z-index: 1;
   left: 0;
   top: 0;
 }
 
-/* buy */
-.btn .buy {z-index: 3; font-weight: bolder;}
+/* like */
+.btn .like {z-index: 3; font-weight: bolder;cursor: pointer;}
 
-.btn:hover .price {transform: translateX(-110%);}
+.btn:hover .likes {transform: translateX(-110%);}
 
-.btn:hover .shopping-cart {transform: translateX(0%);}
+.btn:hover .animate {transform: translateX(0%);}
 
 
 
@@ -167,7 +169,7 @@ a{
     line-height: 1.9;
     text-align: left;
     font-size: 120%;
-    cursor: no-drop;
+    
     color: #FFF;
     height: 100%;
     width: 100%;

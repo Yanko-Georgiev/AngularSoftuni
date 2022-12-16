@@ -6,26 +6,38 @@
                     <h1>Add Movie</h1> 
                     <p class="text-muted"> Please enter movie details!</p> 
                     <input type="text" required ngModel #titleInput="ngModel" name="movieName" placeholder="Title"> 
-                    <p *ngIf="titleInput.errors?.['required'] && titleInput.touched">
+                    <p *ngIf="titleInput.errors?.['required'] && invalid">
                         Title is required!
                     </p>
                     <input type="text" required ngModel #imgInput="ngModel" name="img" placeholder="imgUrl"> 
-                    <p *ngIf="imgInput.errors?.['required'] && imgInput.touched">
+                    <p *ngIf="imgInput.errors?.['required'] && invalid">
                         ImageURL is required!
                     </p>
-                    <input type="text" required ngModel #descriptionInput="ngModel" name="description" placeholder="description">
-                    <input type="text" required ngModel #topCastInput="ngModel" name="topCast1" placeholder="topCast1">
-                    <input type="text" required ngModel #topCastRoleInput="ngModel" name="topCastRole1" placeholder="topCastRole1">
-                    <input type="text" ngModel #topCastInput2="ngModel" name="topCast2" placeholder="topCast2(optional)">
-                    <input type="text" ngModel #topCastRoleInput2="ngModel" name="topCastRole2" placeholder="topCastRole2(optional)">
-                    <input type="text" ngModel #topCastInput3="ngModel" name="topCast3" placeholder="topCast3(optional)">
-                    <input type="text" ngModel #topCastRoleInput3="ngModel" name="topCastRole3" placeholder="topCastRole3(optional)">
-                    <input type="text" ngModel #topCastInput4="ngModel" name="topCast4" placeholder="topCast4(optional)">
-                    <input type="text" ngModel #topCastRoleInput4="ngModel" name="topCastRole4" placeholder="topCastRole4(optional)">
-                    <input type="text" ngModel #topCastInput5="ngModel" name="topCast5" placeholder="topCast5(optional)">
-                    <input type="text" ngModel #topCastRoleInput5="ngModel" name="topCastRole5" placeholder="topCastRole5(optional)">
+                    <textarea type="text" required [maxlength]="220" ngModel #descriptionInput="ngModel" name="description" placeholder="description &#013; (less than 220 characters)"></textarea>
+                    <p *ngIf="descriptionInput.errors?.['required'] && invalid">
+                        Description is required!
+                    </p>
+                    <p *ngIf="descriptionInput.errors?.['maxlength'] && invalid">
+                        Description can't be longer than 220 characters!
+                    </p>
+                    <input type="text" required ngModel #topCastInput="ngModel" name="topCast1" placeholder="Cast member 1">
+                    <p *ngIf="descriptionInput.errors?.['required'] && invalid">
+                        At least on cast member is required!
+                    </p>
+                    <input type="text" required ngModel #topCastRoleInput="ngModel" name="topCastRole1" placeholder="Cast member 1 role">
+                    <p *ngIf="descriptionInput.errors?.['required'] && invalid">
+                        At least on cast member role is required!
+                    </p>
+                    <input type="text" ngModel #topCastInput2="ngModel" name="topCast2" placeholder="Cast member 2 (optional)">
+                    <input type="text" ngModel #topCastRoleInput2="ngModel" name="topCastRole2" placeholder="Cast member 2 role (optional)">
+                    <input type="text" ngModel #topCastInput3="ngModel" name="topCast3" placeholder="Cast member 3 (optional)">
+                    <input type="text" ngModel #topCastRoleInput3="ngModel" name="topCastRole3" placeholder="Cast member 3 role (optional)">
+                    <input type="text" ngModel #topCastInput4="ngModel" name="topCast4" placeholder="Cast member 4 (optional)">
+                    <input type="text" ngModel #topCastRoleInput4="ngModel" name="topCastRole4" placeholder="Cast member 4 role (optional)">
+                    <input type="text" ngModel #topCastInput5="ngModel" name="topCast5" placeholder="Cast member 5 (optional)">
+                    <input type="text" ngModel #topCastRoleInput5="ngModel" name="topCastRole5" placeholder="Cast member 5 role (optional)">
                     
-                    <input [disabled]="form.invalid" type="submit" value="Add"> 
+                    <input type="submit" value="Add"> 
                 </form> 
             </div> 
         </div> 

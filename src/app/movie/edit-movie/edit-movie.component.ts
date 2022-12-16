@@ -14,14 +14,30 @@ import { MovieService } from '../movie.service';
 })
 
 export class EditMovieComponent{
+  
+  topCastArr:Array<string>=[]
   movieId!:string|undefined
   movieData: IMovie|null=null;
   constructor(private activatedRoute: ActivatedRoute, private movieService: MovieService, private authService:AuthService, private router: Router, private apiService:ApiService){
     this.movieData=this.activatedRoute.snapshot.data?.['movie'];
     console.log(this.movieData);
+    let l = 0;
+    if(this.movieData?.topCast.length!=undefined){
+      l=this.movieData.topCast.length
+    }
+    for (let i = 0; i < l; i++) {
+      if (this.movieData?.topCast[i][0]!=undefined && this.movieData.topCast[i][1]!=undefined) {
+        this.topCastArr.push(this.movieData.topCast[i][0])
+        this.topCastArr.push(this.movieData.topCast[i][1])
+      }else{
+        this.topCastArr.push('')
+        this.topCastArr.push('')
+      }
+      
+    }
   }
   
-  @Input() movieDataForm =this.movieData
+  
   
   EditMovieHandler(form: NgForm): void{
     if (form.invalid) {

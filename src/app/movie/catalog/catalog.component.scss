@@ -4,18 +4,17 @@ h1, h2{
 }
 
 .card {
-    --card-gradient: rgba(0, 0, 0, 0.8);
+    --card-gradient: rgba(255, 255, 255, 0.8);
     
     
     --card-blend-mode: overlay;
-    
-    background-color: #fff;
+    background-color: #191919;
     border-radius: 0.5rem;
     box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
     padding-bottom: 1rem;
     background-image: linear-gradient(
         var(--card-gradient),
-        white max(9.5rem, 27vh)
+        #191919 max(9.5rem, 27vh)
         );
         overflow: hidden;
         
@@ -64,19 +63,25 @@ h1, h2{
     line-height: 1.5;
     font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
     helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-    color: #444;
-    background-color: #e1faf1;
+    
 }
-
+li{
+  color: #fff;
+  
+}
 .card h3 {
     margin-top: 1rem;
     font-size: 1.25rem;
+    cursor: pointer;
 }
 
 .card a {
     color: inherit;
+    cursor: pointer;
 }
-
+.card p{
+  cursor: pointer;
+}
 .card-wrapper {
     list-style: none;
     padding: 0;

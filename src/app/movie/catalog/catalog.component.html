@@ -3,14 +3,15 @@
 <ng-template #full >
     <h2>Most recent movies</h2>
     <ul class="card-wrapper">
-        <li routerLink="details/{{movie._id}}" *ngFor="let movie of movieList?.slice(-3); let i=index" class="card">
+        <li routerLink="details/{{movie._id}}" *ngFor="let movie of movieList?.slice(-3)?.reverse(); let i=index" class="card">
             <img src={{movie.img}} alt=''>
             <h3>{{movie.movieName}}</h3>
             <p>{{movie.description}}</p>
         </li>
     </ul>
+    <h2>All movies</h2>
     <ul class="card-wrapper">
-        <li routerLink="/catalog/details/{{movie._id}}" *ngFor="let movie of movieList?.slice(0,-3); let i=index" class="card">
+        <li routerLink="/catalog/details/{{movie._id}}" *ngFor="let movie of movieList; let i=index" class="card">
             <img src={{movie.img}} alt=''>
             <h3>{{movie.movieName}}</h3>
             <p>{{movie.description}}</p>

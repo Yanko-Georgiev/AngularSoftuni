@@ -1,0 +1,363 @@
+[{
+  "_id": {
+    "$oid": "639e298327731003dc418b0f"
+  },
+  "likes": [
+    "639e2ea227731003dc418b13"
+  ],
+  "topCast": [
+    [
+      "Ewan McGregor",
+      "Obi-Wan Kenobi"
+    ],
+    [
+      "Liam Neeson",
+      "Qui-Gon Jinn"
+    ],
+    [
+      "Natalie Portman",
+      "Queen Amidala, Padmé"
+    ],
+    [
+      "Jake Lloyd",
+      "Anakin Skywalker"
+    ],
+    [
+      "Ian McDiarmid",
+      "Senator Palpatine"
+    ]
+  ],
+  "movieName": "Star Wars: Episode I - The Phantom Menace",
+  "userId": {
+    "$oid": "639e284d27731003dc418b0e"
+  },
+  "img": "https://m.media-amazon.com/images/M/MV5BYTRhNjcwNWQtMGJmMi00NmQyLWE2YzItODVmMTdjNWI0ZDA2XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg",
+  "description": "Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory.",
+  "created_at": {
+    "$date": {
+      "$numberLong": "1671309699225"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671311019641"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639e2a6d27731003dc418b10"
+  },
+  "likes": [
+    "639e2ea227731003dc418b13"
+  ],
+  "topCast": [
+    [
+      "Hayden Christensen",
+      "Anakin Skywalker"
+    ],
+    [
+      "Natalie Portman",
+      "Padmé"
+    ],
+    [
+      " Ewan McGregor",
+      "Obi-Wan Kenobi"
+    ],
+    [
+      "Christopher Lee",
+      "Count Dooku, Darth Tyranus"
+    ],
+    [
+      "Samuel L. Jackson",
+      "Mace Windu"
+    ]
+  ],
+  "movieName": "Star Wars: Episode II - Attack of the Clones",
+  "userId": {
+    "$oid": "639e284d27731003dc418b0e"
+  },
+  "img": "https://m.media-amazon.com/images/M/MV5BMDAzM2M0Y2UtZjRmZi00MzVlLTg4MjEtOTE3NzU5ZDVlMTU5XkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_.jpg",
+  "description": "Ten years after initially meeting, Anakin Skywalker shares a forbidden romance with Padmé Amidala, while Obi-Wan Kenobi investigates an assassination attempt on the senator and discovers a secret clone army crafted for t",
+  "created_at": {
+    "$date": {
+      "$numberLong": "1671309933264"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671311027653"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639e2ba427731003dc418b11"
+  },
+  "likes": [
+    "639e2ea227731003dc418b13",
+    "639e310527731003dc418b18"
+  ],
+  "topCast": [
+    [
+      "Hayden Christensen",
+      "Anakin Skywalker"
+    ],
+    [
+      "Natalie Portman",
+      "Padmé"
+    ],
+    [
+      " Ewan McGregor",
+      "Obi-Wan Kenobi"
+    ],
+    [
+      "Samuel L. Jackson",
+      "Mace Windu"
+    ],
+    [
+      "Ian McDiarmid",
+      "Supreme Chancellor Palpatine"
+    ]
+  ],
+  "movieName": "Star Wars: Episode III - Revenge of the Sith",
+  "userId": {
+    "$oid": "639e284d27731003dc418b0e"
+  },
+  "img": "https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_FMjpg_UX1000_.jpg",
+  "description": "Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.\n\n",
+  "created_at": {
+    "$date": {
+      "$numberLong": "1671310244060"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671312154559"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639e2f5b27731003dc418b14"
+  },
+  "likes": [],
+  "topCast": [
+    [
+      "Mark Hamill",
+      "Luke Skywalker"
+    ],
+    [
+      " Harrison Ford",
+      "Han Solo"
+    ],
+    [
+      "Carrie Fisher",
+      "Princess Leia Organa"
+    ],
+    [
+      "Alec Guinness",
+      "Ben Obi-Wan Kenobi"
+    ],
+    [
+      "Peter Cushing",
+      "Grand Moff Tarkin"
+    ]
+  ],
+  "movieName": "Star Wars: Episode IV - New Hope",
+  "userId": {
+    "$oid": "639e2ea227731003dc418b13"
+  },
+  "img": "https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_.jpg",
+  "description": "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.",
+  "created_at": {
+    "$date": {
+      "$numberLong": "1671311195299"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671311372965"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639e2fe627731003dc418b15"
+  },
+  "likes": [
+    "639e310527731003dc418b18",
+    "639e33bc27731003dc418b1c"
+  ],
+  "topCast": [
+    [
+      "Mark Hamill",
+      "Luke Skywalker"
+    ],
+    [
+      " Harrison Ford",
+      "Han Solo"
+    ],
+    [
+      "Carrie Fisher",
+      "Princess Leia Organa"
+    ],
+    [
+      "Billy Dee Williams",
+      "Lando Calrissian"
+    ],
+    [
+      " Anthony Daniels",
+      "C-3PO"
+    ]
+  ],
+  "movieName": "Star Wars: Episode V - The Empire Strikes Back",
+  "userId": {
+    "$oid": "639e2ea227731003dc418b13"
+  },
+  "img": "https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+  "description": "After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda, while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.",
+  "created_at": {
+    "$date": {
+      "$numberLong": "1671311334995"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671312322258"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639e309e27731003dc418b16"
+  },
+  "likes": [],
+  "topCast": [
+    [
+      "Mark Hamill",
+      "Luke Skywalker"
+    ],
+    [
+      " Harrison Ford",
+      "Han Solo"
+    ],
+    [
+      "Carrie Fisher",
+      "Princess Leia Organa"
+    ],
+    [
+      "Billy Dee Williams",
+      "Lando Calrissian"
+    ],
+    [
+      " Anthony Daniels",
+      "C-3PO"
+    ]
+  ],
+  "movieName": "Star Wars: Episode VI - Return of the Jedi",
+  "userId": {
+    "$oid": "639e2ea227731003dc418b13"
+  },
+  "img": "https://m.media-amazon.com/images/M/MV5BOWZlMjFiYzgtMTUzNC00Y2IzLTk1NTMtZmNhMTczNTk0ODk1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg",
+  "description": "After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap.",
+  "created_at": {
+    "$date": {
+      "$numberLong": "1671311518997"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671311518997"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639e323a27731003dc418b19"
+  },
+  "likes": [],
+  "topCast": [
+    [
+      " Daisy Ridley",
+      "Rey"
+    ],
+    [
+      "John Boyega",
+      "Finn"
+    ],
+    [
+      "Oscar Isaac",
+      "Poe Dameron"
+    ],
+    [
+      "Domhnall Gleeson",
+      "General Hux"
+    ],
+    [
+      "Harrison Ford",
+      "Han Solo"
+    ]
+  ],
+  "movieName": "Star Wars: Episode VII - The Force Awakens",
+  "userId": {
+    "$oid": "639e310527731003dc418b18"
+  },
+  "img": "https://m.media-amazon.com/images/M/MV5BOTAzODEzNDAzMl5BMl5BanBnXkFtZTgwMDU1MTgzNzE@._V1_.jpg",
+  "description": "As a new threat to the galaxy rises, Rey, a desert scavenger, and Finn, an ex-stormtrooper, must join Han Solo and Chewbacca to search for the one hope of restoring peace.",
+  "created_at": {
+    "$date": {
+      "$numberLong": "1671311930894"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671311944292"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639e32c227731003dc418b1a"
+  },
+  "likes": [],
+  "topCast": [
+    [
+      " Daisy Ridley",
+      "Rey"
+    ],
+    [
+      "John Boyega",
+      "Finn"
+    ],
+    [
+      "Mark Hamill",
+      "Luke Skywalker"
+    ],
+    [
+      "Carrie Fisher",
+      "Leia Organa"
+    ],
+    [
+      " Adam Driver",
+      "Kylo Ren"
+    ]
+  ],
+  "movieName": "Star Wars: Episode VIII - The Last Jedi",
+  "userId": {
+    "$oid": "639e310527731003dc418b18"
+  },
+  "img": "https://m.media-amazon.com/images/M/MV5BMjQ1MzcxNjg4N15BMl5BanBnXkFtZTgwNzgwMjY4MzI@._V1_.jpg",
+  "description": "The Star Wars saga continues as new heroes and galactic legends go on an epic adventure, unlocking mysteries of the Force and shocking revelations of the past.",
+  "created_at": {
+    "$date": {
+      "$numberLong": "1671312066651"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671312066651"
+    }
+  },
+  "__v": 0
+}]

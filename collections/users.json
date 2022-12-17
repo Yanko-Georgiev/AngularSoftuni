@@ -1,0 +1,91 @@
+[{
+  "_id": {
+    "$oid": "639c9571ffc8271753a28c1e"
+  },
+  "email": "vanko1@gmail.com",
+  "username": "Vanko1",
+  "password": "$2b$05$iAjwdNrP8nIgG68UljuGkeDQzJV1305IvxnxwNXQDqN5eVtSwyNBW",
+  "created_at": {
+    "$date": {
+      "$numberLong": "1671206257539"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671206257539"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639e284d27731003dc418b0e"
+  },
+  "email": "maria123@gmail.bg",
+  "username": "maria123",
+  "password": "$2b$05$7axXaf0p5ygaY7hjn0BzoeKQyi8ZhpGrLY83LWTCgrtZ8fN4erS52",
+  "created_at": {
+    "$date": {
+      "$numberLong": "1671309389527"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671309389527"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639e2ea227731003dc418b13"
+  },
+  "email": "ogtrilogy@gmail.com",
+  "username": "ogtrilogy",
+  "password": "$2b$05$wp8yj89QbOJCLNdCA3tz1.5.ep37iNl.BRWGDeDG631ccWq04LS/G",
+  "created_at": {
+    "$date": {
+      "$numberLong": "1671311010653"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671311010653"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639e310527731003dc418b18"
+  },
+  "email": "newShit@gmail.com",
+  "username": "newShit",
+  "password": "$2b$05$tLxvfSichnZNSC0c7dsh/u.Bu5XyNSg2myTxCjVEeYbivljMs.iti",
+  "created_at": {
+    "$date": {
+      "$numberLong": "1671311621250"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671311621250"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "639e33bc27731003dc418b1c"
+  },
+  "email": "yankog@gmail.com",
+  "username": "yankog",
+  "password": "$2b$05$lY.SOQwvISuIKvepfkkv1OoFL9sp2w856KCXaKwdJRmDG9NhLV6EG",
+  "created_at": {
+    "$date": {
+      "$numberLong": "1671312316526"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1671312316526"
+    }
+  },
+  "__v": 0
+}]
